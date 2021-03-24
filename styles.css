@@ -1,0 +1,370 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* overall page*/
+.page {
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 100%;
+    background-color: #faf9f4;
+}
+
+/* top menu bar*/
+.menu {
+    width: 100%;
+    height: 200px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFE4E1;
+}
+
+/* all headings*/
+.headings {
+    font-family: 'Aguafina Script';
+}
+
+/* top left logo */
+h1 {
+  font-weight: bold;
+  font-family: cursive;
+  color: #808080;
+  font-size: 4em;
+  font-family: 'Aguafina Script';
+
+  padding-left: 70px;
+  padding-top: 20px;
+  line-height: 1.3em;
+}
+
+/* Dropdown Menu */
+
+.menu-items > li {
+    display: inline;
+    margin-right: 150px;
+    font-size: larger;
+}
+
+.menu-items > li:last-of-type {
+    margin-right: 40px;
+}
+
+.portfolio {
+    margin-top: 15px;
+    position: relative;
+}
+
+.portfolio > span {
+    z-index: 2;
+    position: relative;
+    cursor: pointer;
+}
+
+.portfolio:hover .portfolio-menu {
+    display: flex;
+    flex-direction: column;
+    background-color: aliceblue;
+    border-radius: 5px;
+    padding-top: 60px;
+
+    position: absolute;
+    top: -25px;
+    left: -30px;
+    z-index: 1;
+}
+
+.portfolio-menu {
+    display: none;
+}
+
+.portfolio-menu li{
+    list-style: none;
+    border-bottom: 1px solid #FFF;
+
+    padding: 0 40px 10px 20px;
+    margin: 10px;
+}
+
+.portfolio-menu li {
+    border-bottom: none;
+}
+
+a:link,
+a:visited {
+    color:  #5D6063;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* Body of Webpage */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.middle-headings {
+    font-size: 50pt;
+    width: 100%;
+    height: 100px;
+    
+    color: #808080;
+    margin-left: 30px;
+    padding-right: 1300px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/*Slideshow*/
+
+.row0 {
+    width: 100%;
+    height: 900px;
+    padding: 15px;
+    margin: 15px;
+    margin-top: 60px;
+    
+    flex-direction: row;
+    position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 45%;
+    width: auto;
+   
+    padding: 16px;
+    color: grey;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+
+    margin-right: 12px;
+}
+
+.prev {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    margin-left: 550px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Number text (1/3 etc) */ 
+
+.slidenumber {
+    color: goldenrod;
+    font-size: 20px;
+    position: absolute;
+
+    left: 600px;
+    top: 810px;
+    z-index: 2;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    position: absolute;
+
+    z-index: 2;
+}
+
+#dot1 {
+    top: 108%;
+    left: 1205px;
+}
+
+#dot2 {
+    top: 108%;
+    left: 1225px;
+}
+
+#dot3 {
+    top: 108%;
+    left: 1245px;
+}
+
+#dot4 {
+    top: 108%;
+    left: 1265px;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+.quote {
+    text-align: center;
+    color: #bbb;
+    font-size: 35pt;
+    font-family: 'Times New Roman', Times, serif;
+
+    float: left;
+    width: 900px;
+    margin-top: 150px;
+    position: absolute;
+
+    /*border: 1px solid green;*/
+}
+
+.quote > span {
+    font-size: 70pt;
+    font-style: italic;
+    color:  #d1949a;
+}
+
+#image0 {
+    width: 1200px;
+    height: 800px;
+
+    position: absolute;
+    margin: 10px;
+    margin-right: 20px;
+    left: 603px;
+}
+
+/*------- Make images see-through --------*/
+Img {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+Img:hover {opacity: 0.7;}
+
+
+
+/* Images on second row*/
+
+
+.row1 {
+    padding: 15px;
+    width: 630px; 
+    height: 430px;
+
+    display: flex;
+    flex-direction: row;
+}
+
+#image1 {
+    flex: 100%;
+}
+
+#image2 {
+    flex: 100%;
+}
+
+#image3 {
+    flex: 100%;
+}
+
+/* Images on third row */
+
+.row2 {
+    padding: 15px;
+    width: 630px;
+    height: 430px;
+
+    display: flex;
+    flex-direction: row;
+}
+
+#image4 {
+    flex: 100%;
+}
+
+#image5 {
+    flex: 100%;
+}
+
+#image6 {
+    flex: 100%;
+}
+
+
+.row3 {
+    padding: 15px;
+    width: 630px;
+    height: 430px;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.row4 {
+    padding: 15px;
+    width: 630px;
+    height: 430px;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.row5 {
+    padding: 15px;
+    width: 630px;
+    height: 430px;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.row6 {
+    padding: 15px;
+    width: 630px;
+    height: 430px;
+
+    display: flex;
+    flex-direction: row;
+}
